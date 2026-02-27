@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
- 
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Danielson</title>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danielson - Barça Edition</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4e3de;
+            /* Color de fondo azulgrana suave para que combine */
+            background-color: #004d98; 
 
-            /* Fondo con escudo del Barça en Base64 */
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc5MCcgaGVpZ2h0PSc5MCcgdmlld0JveD0nMCAwIDkwIDkwJz48aW1hZ2UgaGVpZ2h0PSc5MCcgd2lkdGg9JzkwJyBocmVmPSJkYXRhOmltYWdlL3BuZztiYXNlNjQs... (aquí iría todo el Base64 real del escudo) ...Ii8+PC9zdmc+");
-            
+            /* Fondo de escudos del Barça */
+            /* He usado la imagen que subiste. Asegúrate de que el nombre del archivo coincida */
+            background-image: url("image_0a58da.png"); 
             background-repeat: repeat;
-            background-size: 90px 90px;
+            background-size: 80px 80px; /* Ajusta el tamaño de los escudos aquí */
+            
+            /* Un ligero overlay para que los escudos no distraigan tanto del contenido */
+            background-blend-mode: overlay;
 
             display: flex;
             justify-content: center;
@@ -24,18 +28,20 @@
             height: 100vh;
             color: white;
         }
- 
+
         .card {
-            background: rgba(255, 255, 255, 0.15);
+            /* Un fondo oscuro semi-transparente para que resalte sobre los escudos */
+            background: rgba(0, 0, 0, 0.6); 
             backdrop-filter: blur(10px);
             padding: 40px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border: 2px solid #a50044; /* Borde color granate */
             width: 100%;
             max-width: 360px;
         }
- 
+
         .foto {
             width: 150px;
             height: 150px;
@@ -46,74 +52,26 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            border: 3px solid #edbb00; /* Borde dorado */
         }
- 
+
         .foto img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
- 
+
         h1 {
             margin: 10px 0 20px 0;
             color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
- 
+
         .btn {
             display: inline-block;
             padding: 12px 20px;
-            background: #E1306C;
+            /* Botón con los colores del club */
+            background: #a50044; 
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: 0.3s ease;
-            cursor: pointer;
-        }
- 
-        .btn:hover {
-            background: #c82361;
-            transform: scale(1.05);
-        }
-    </style>
-</head>
- 
-<body>
- 
-    <div class="card">
-        <div class="foto">
-            <img src="dani.jpeg" alt="Foto de payo">
-        </div>
- 
-        <h1>Danielson</h1>
- 
-        <a class="btn" onclick="abrirInstagram()">
-            Instagram
-        </a>
-    </div>
- 
-    <script>
-        function abrirInstagram() {
-            var username = "_daanieel7";
-            var appLink = "instagram://user?username=" + username;
-            var webLink = "https://instagram.com/" + username;
- 
-            // Detectar si es móvil
-            var esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
- 
-            if (esMovil) {
-                window.location = appLink;
- 
-                // Si no abre la app, ir a la web
-                setTimeout(function () {
-                    window.location = webLink;
-                }, 600);
-            } else {
-                window.location = webLink;
-            }
-        }
-    </script>
- 
-</body>
- 
-</html>
+            border-radius
