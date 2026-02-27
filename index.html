@@ -1,1 +1,118 @@
-<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Danielson</title> <style> body { margin: 0; font-family: Arial, sans-serif; background-color: #f4e3de; /* Fondo de corazones */ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Ctext x='10' y='50' font-size='40'%3E❤️%3C/text%3E%3C/svg%3E"); background-repeat: repeat; background-size: 90px 90px; display: flex; justify-content: center; align-items: center; height: 100vh; color: white; } .card { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); width: 100%; max-width: 360px; } .foto { width: 150px; height: 150px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.3); margin: 0 auto 20px auto; display: flex; justify-content: center; align-items: center; overflow: hidden; } .foto img { width: 100%; height: 100%; object-fit: cover; } h1 { margin: 10px 0 20px 0; color: #ffffff; } .btn { display: inline-block; padding: 12px 20px; background: #E1306C; color: white; text-decoration: none; border-radius: 25px; font-weight: bold; transition: 0.3s ease; cursor: pointer; } .btn:hover { background: #c82361; transform: scale(1.05); } </style> </head> <body> <div class="card"> <div class="foto"> <img src="dani.jpeg" alt="Foto de payo"> </div> <h1>Danielson</h1> <a class="btn" onclick="abrirInstagram()"> Instagram </a> </div> <script> function abrirInstagram() { var username = "_daanieel7"; var appLink = "instagram://user?username=" + username; var webLink = "https://instagram.com/" + username; // Detectar si es móvil var esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent); if (esMovil) { window.location = appLink; // Si no abre la app, ir a la web setTimeout(function () { window.location = webLink; }, 600); } else { window.location = webLink; } } </script> </body> </html>
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danielson</title>
+ 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4e3de;
+ 
+            /* Fondo de corazones */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Ctext x='10' y='50' font-size='40'%3E❤️%3C/text%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 90px 90px;
+ 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+ 
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 360px;
+        }
+ 
+        .foto {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+ 
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+ 
+        h1 {
+            margin: 10px 0 20px 0;
+            color: #ffffff;
+        }
+ 
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #E1306C;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+ 
+        .btn:hover {
+            background: #c56288;
+            transform: scale(1.05);
+        }
+</style>
+</head>
+ 
+<body>
+ 
+    <div class="card">
+<div class="foto">
+<img src="IMG_6769.jpeg" alt="Foto de Max Negre">
+</div>
+ 
+        <h1>Danielson</h1>
+ 
+        <a class="btn" onclick="abrirInstagram()">
+             Instagram
+</a>
+</div>
+ 
+    <script>
+        function abrirInstagram() {
+            var username = "_daanieel7";
+            var appLink = "instagram://user?username=" + username;
+            var webLink = "https://www.instagram.com/_daanieel7/" + username;
+ 
+            // Detectar si es móvil
+            var esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+ 
+            if (esMovil) {
+                window.location = appLink;
+ 
+                // Si no abre la app, ir a la web
+                setTimeout(function () {
+                    window.location = webLink;
+                }, 600);
+            } else {
+                window.location = webLink;
+            }
+        }
+</script>
+ 
+</body>
+ 
+</html>
