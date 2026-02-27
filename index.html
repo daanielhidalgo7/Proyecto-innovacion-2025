@@ -1,57 +1,118 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
+ 
 <head>
-<meta charset="UTF-8" />
-<title></title>
-<meta name="viewport" content="width=device-width, initialscale=1.0" />
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danielson</title>
+ 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4e3de;
+ 
+            /* Fondo de corazones */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Ctext x='10' y='50' font-size='40'%3E❤️%3C/text%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 90px 90px;
+ 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+ 
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 360px;
+        }
+ 
+        .foto {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+ 
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+ 
+        h1 {
+            margin: 10px 0 20px 0;
+            color: #ffffff;
+        }
+ 
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #E1306C;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+ 
+        .btn:hover {
+            background: #c56288;
+            transform: scale(1.05);
+        }
+</style>
 </head>
+ 
 <body>
-    <header>
-        <h1>Daniel Hidalgo</h1>
-            <p class="subtitulo">Alumno 1SMX B <B></B></p>
-
-                
-        <nav>
-            <ul>
-
-
-         </ul>
-     </nav>
-     </header>
-     <section class="foto-perfil">
-        <hr>
-        <img src="content.jpg" width="100" height="100">
-        <hr>
-    </section> 
-    <main>
-       <section> 
-
-        <div class="card">
-             <img src="descarga.jpg" class="cards">
-            <h3>Instagram</h3>
-            <a href="https://www.instagram.com/_daanieel7/" target="_blank" rel="noopener more ferrer"Enlace 1>@_daanieel7</a>
-        </div>
-<br>
-         <div class="card">
-            <img src="descarga (1).png" class="cards">
-            <h3>Github</h3>
-            <a href="https://github.com/daanielhidalgo7" target="_blank">@daanielhidalgo7</a>
-        </div>
-          <br>
-        <div class="card">
-           <img src="descarga.png" class="cards">
-            <h3>Tiktok</h3>
-            <a href="https://www.tiktok.com/@77.daniel" target="blank">@77.daniel</a>
-            <img src="" width:"30px"">
-        </div>
-
-            </section>
-    </main>
-    <br><br><br><br><br><br>
-    <br><br><BR>
-    <footer>
-        Copyright &#169 2025 Daniel Hidalgo allrights reserved
-    
-</body> 
+ 
+    <div class="card">
+<div class="foto">
+<img src="IMG_6769.jpeg" alt="Foto de Max Negre">
+</div>
+ 
+        <h1>Danielson</h1>
+ 
+        <a class="btn" onclick="abrirInstagram()">
+             Instagram
+</a>
+</div>
+ 
+    <script>
+        function abrirInstagram() {
+            var username = "_daanieel7";
+            var appLink = "instagram://user?username=" + username;
+            var webLink = "https://www.instagram.com/_daanieel7/" + username;
+ 
+            // Detectar si es móvil
+            var esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+ 
+            if (esMovil) {
+                window.location = appLink;
+ 
+                // Si no abre la app, ir a la web
+                setTimeout(function () {
+                    window.location = webLink;
+                }, 600);
+            } else {
+                window.location = webLink;
+            }
+        }
+</script>
+ 
+</body>
+ 
+</html>
